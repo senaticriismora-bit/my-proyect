@@ -1,16 +1,48 @@
-# React + Vite
+# my-proyect
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Proyecto de práctica con React y Vite para ejercitar la creación y reutilización de componentes.
 
-Currently, two official plugins are available:
+## Integrantes — Grupo 4
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Apellidos | Nombres |
+| --- | --- |
+| MECHÁN ENEQUE | JUAN ENRIQUE |
+| MORA DAMIAN | CHRISTIAN ALFREDO |
+| MURGA CASTRO | ANDRÉ ALEXANDER |
+| ROMERO CANAQUIRI | ROLIN ROY |
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- Oxlint como linter
 
-## Expanding the Oxlint configuration
+## Requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Node.js 24 o superior.
+
+## Comandos
+
+```bash
+npm install       # instala las dependencias
+npm run dev       # servidor de desarrollo con recarga en caliente
+npm run build     # generación para producción en dist/
+npm run preview   # sirve la generación de dist/ de forma local
+npm run lint      # revisa el código con Oxlint
+```
+
+## Estructura
+
+```
+index.html            punto de entrada del navegador, monta #root
+src/
+  main.jsx            crea la app React y renderiza <App />
+  App.jsx             componente raíz: título y los <Menu />
+  index.css           estilos globales
+  App.css             estilos del componente raíz
+  components/
+    menu.jsx          componente de menú reutilizado varias veces
+    menu.css          estilos del menú
+  assets/             imágenes del proyecto
+public/               archivos estáticos servidos tal cual
+```
